@@ -1,0 +1,15 @@
+---
+# This file is managed centrally by modulesync
+#   https://github.com/maestrodev/puppet-modulesync
+
+before_install:
+  - rm -f Gemfile.lock
+
+matrix:
+  exclude:
+    - rvm: 2.1.4
+      env: PUPPET_VERSION="~> 3"
+    - rvm: 2.1.4
+      env: PUPPET_VERSION="~> 4"
+    - rvm: 2.1.4
+      env: PUPPET_VERSION="~> 5"
